@@ -13,7 +13,8 @@ parameters:
   value: etherpad
 - name: ADMIN_PASSWORD
   description: Admin password for etherpad/admin
-  required: true
+  from: '[A-Z0-9]{8}'
+  generate: expression
 - name: DB_TYPE
   description: Database Type (postgres, mysql)
   value: postgres
